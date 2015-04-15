@@ -1,0 +1,103 @@
+.navbar.affix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+    width: 100%;
+    -webkit-transition: all 2s ease-in;
+    transition: all 1s ease-in;
+    text-align: center;
+}
+
+/*.navbar.affix .navbar-collapse {
+  text-align:center;
+}
+
+.navbar.affix .navbar-nav, .navbar-brand {
+    display:inline-block;
+    float:none;
+}*/
+
+.navbar-brand {
+	margin:-7px;
+}
+
+#floatingLogo.affix-top img {
+    visibility: hidden;
+    width: 100px;
+    top: 60px;
+    left: 60px; 
+    position: fixed;
+    z-index: 1030;
+}
+
+#floatingLogo.affix img {
+    width: 100px;
+    top: 60px;
+    left: 60px; 
+    position: fixed;
+    z-index: 1030;
+}
+
+
+
+/* Navbar custom settings */
+.navbar-default {
+  background-color: #2359a6;
+  border-color: #05afb0;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #000000;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #000000;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #000000;
+  background-color: #05afb0;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #000000;
+  background-color: #05afb0;
+}
+.navbar-default .navbar-toggle {
+  border-color: #05afb0;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #05afb0;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #000000;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #000000;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #000000;
+    background-color: #05afb0;
+  }
+}
