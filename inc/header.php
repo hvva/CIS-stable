@@ -14,6 +14,7 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -41,50 +42,48 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.php"><?php echo $t['NAVBRANDMain']; ?><br /><small><?php echo $t['NAVBRANDSub']; ?></small></a>
+              <a class="navbar-brand" href="index.php"><?php echo $t['navBrandMain']; ?><br /><small><?php echo $t['navBrandSub']; ?></small></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php">Apply</a></li>
-		<li class="dropdown">
-                  <a href="index.php?do=about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About CIS <span class="caret"></span></a>
+                <li class="<?php if ($activePage == "apply") { echo "active"; } ?> hidden-sm"><a href="index.php?p=apply"><?php echo $t['navApply']; ?></a></li>
+		<li class="<?php if ($activePage == "about") { echo "active"; } ?> dropdown">
+                  <a href="index.php?p=about" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $t['navAbout']; ?> <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-		    <li><a href="index.php?do=faculty">Faculty</a></li>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+		    <li><a href="index.php?p=about&do=faculty"><?php echo $t['navAboutFaculty']; ?></a></li>
+                    <li><a href="index.php?p=about&do=dean"><?php echo $t['navAboutDeans']; ?></a></li>
+                    <li><a href="index.php?p=about&do=cisbrief"><?php echo $t['navAboutBrief']; ?></a></li>
+		    <li><a href="index.php?p=about&do=admission"><?php echo $t['navAboutAdmission']; ?></a></li>
+                    <li><a href="index.php?p=about&do=cisoffice"><?php echo $t['navAboutOffice']; ?></a></li>
                   </ul>
                 </li>
-		<li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Majors <span class="caret"></span></a>
+		<li class="<?php if ($activePage == "majors") { echo "active"; } ?> dropdown">
+                  <a href="index.php?p=majors" class="dropdown-toggle"
+			 data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $t['navMajors']; ?> <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+		    <li><a href="index.php?p=majors&do=undergrad"><strong>Undergraduate</strong></a></li>
+                    <li><a href="index.php?p=majors&do=itb"><?php echo $t['navMajorsITB']; ?></a></li>
+                    <li><a href="index.php?p=majors&do=imc"><?php echo $t['navMajorsIMC']; ?></a></li>
+		    <li><a href="index.php?p=majors&do=lifs"><?php echo $t['navMajorsLIFS']; ?></a></li>
+                    <li><a href="index.php?p=majors&do=eas"><?php echo $t['navMajorsEAS']; ?></a></li>
+		    <li class="divider"></li>
+		    <li><a href="index.php?p=majors&do=graduate"><strong>Graduate</strong></a></li>
+		    <li><a href="index.php?p=majors&do=mis">Master's in Information Science</a></li>
+		    <li><a href="index.php?p=majors&do=phd">PhD Opportunities</a></li>
                   </ul>
                 </li>
-		<li class="dropdown">
-                  <a href="#" class="dropdown-toggle hidden-sm hidden-md" data-toggle="dropdown" role="button" aria-expanded="false">SAP (Study Abroad Program) <span class="caret"></span></a>
+		<li class="<?php if ($activePage == "sap") { echo "active"; } ?> dropdown">
+                  <a href="index.php?p=sap" class="dropdown-toggle hidden-sm hidden-md"
+			 data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $t['navSAP']; ?> <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+                    <li><a href="index.php?p=sap&do=sap"><?php echo $t['navSAPAbout']; ?></a></li>
+                    <li><a href="index.php?p=sap&do=partners"><?php echo $t['navSAPPartners']; ?></a></li>
+                    <li><a href="index.php?p=sap&do=partners"><?php echo $t['navSAPStudents']; ?></a></li>
                   </ul>
                 </li>
-		<li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community <span class="caret"></span></a>
+		<li class="<?php if ($activePage == "community") { echo "active"; } ?> dropdown">
+                  <a href="index.php?p=community" class="dropdown-toggle"
+			 data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $t['navCommunity']; ?> <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
@@ -95,8 +94,9 @@
                     <li><a href="#">One more separated link</a></li>
                   </ul>
                 </li>
-		<li class="dropdown">
-                  <a href="#" class="dropdown-toggle hidden-sm" data-toggle="dropdown" role="button" aria-expanded="false">Administration <span class="caret"></span></a>
+		<li class="<?php if ($activePage == "admin") { echo "active"; } ?> dropdown">
+                  <a href="index.php?p=admin" class="dropdown-toggle hidden-sm"
+			 data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $t['navAdministration']; ?> <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
@@ -107,8 +107,12 @@
                     <li><a href="#">One more separated link</a></li>
                   </ul>
                 </li>
-		<li>Korean</li>
-		<li>English</li>
+		<li><div style="padding-top: 10px;" class="btn-toolbar" role="toolbar" aria-label="...">
+			<div class="btn-group btn-group-sm" role="group">
+			<button type="button" class="btn btn-default"><a href="<?php $_SERVER['REQUEST_URI'] ?>?lang=ko">한국의</a></button>
+			<button type="button" class="btn btn-default"><a href="<?php $_SERVER['REQUEST_URI'] ?>?lang=en">English</a></button>
+			</div>
+		</div></li>
               </ul>
             </div>
           </div>
